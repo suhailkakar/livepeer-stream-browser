@@ -38,7 +38,7 @@ export default function Nav() {
               Livepeer Studio
             </Link>
             <Link
-              href="https://github.com/suhailkakar/Livepeer-EVM-Tokengating"
+              href="https://github.com/suhailkakar/livepeer-stream-browser"
               className="text-base font-regular text-white transition-all duration-200 rounded focus:outline-none font-sans hover:text-opacity-50 "
             >
               GitHub Repo

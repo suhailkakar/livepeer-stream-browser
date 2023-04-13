@@ -9,7 +9,7 @@ import {
 export default function App({ Component, pageProps }: AppProps) {
   const client = createReactClient({
     provider: studioProvider({
-      apiKey: "4d824972-f6e6-4437-b3f8-25d6db1087ea",
+      apiKey: "881598cf-c59f-4df3-bc81-19a0cf826462",
     }),
   });
 

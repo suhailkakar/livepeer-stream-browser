@@ -4,6 +4,7 @@ import Input from "@/components/shared/Input";
 import { useCreateStream } from "@livepeer/react";
 import React, { useEffect, useRef, useState } from "react";
 import { Client } from "@livepeer/webrtmp-sdk";
+import Link from "next/link";
 
 export default function Create(): JSX.Element {
   const [streamName, setStreamName] = useState<string>("");
@@ -53,7 +54,6 @@ export default function Create(): JSX.Element {
     setIsLive(true);
     session.on("open", () => {
       console.log("Stream started.");
-      alert("Stream started; visit Livepeer Dashboard.");
     });
 
     session.on("close", () => {
@@ -89,6 +89,10 @@ export default function Create(): JSX.Element {
           ) : (
             <>
               <p className="text-3xl text-white text-center">You are live!</p>
+              <p className="text-md mt-4 text-white text-center">You can view the stream <Link 
+              href={`/watch/${stream?.playbackId}`}
+              className="text-primary">
+              here</Link></p>
               <div className="flex mt-5">
                 <p className="font-regular text-zinc-500 w-32">Playback Id: </p>
                 <p className="text-white ml-2 hover:text-primary hover:cursor-pointer">
